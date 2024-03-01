@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texas Sports Talk</title>
+
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <nav>
+        <div class="nav-wrapper blue darken-4">
+          <a href="/" class="brand-logo">TEXAS SPORTS TALK</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <div class="profile-logout-container"></div>
+            {{#if logged_in}}
+            <li><a href="/profile">Profile</a></li>
+            <button class="no-button" id="logout">Logout</button>
+            {{else}}
+            <li><a href="/login">Login</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+   <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>

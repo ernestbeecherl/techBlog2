@@ -1,0 +1,130 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: white;
+  min-height: 100vh;
+}
+
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #bb0000;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #660683;
+  text-decoration: underline;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ... Your existing styles ... */
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+#nav-mobile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-logout-container {
+  display: flex;
+  /* Display children horizontally */
+  align-items: center;
+  /* Align children vertically in the center */
+}
+
+/* ... Your existing styles ... */
+
+.tooltip {
+  position: relative;
+  cursor: help;
+}
+
+
+.card-content {
+  text-align: center;
+}
+
+
+.tooltip:hover::after {
+  content: attr(title);
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+header {
+  background-color: #d26c19;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.form.new-blog-form {
+  max-width: 400px;
+  /* Adjust the maximum width as needed */
+
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.custom-class {
+  background-color: black;
+  /* Set your desired background color */
+  color: #fff;
+  /* Set your desired text color */
+  padding: 10px;
+
+}
+
+.custom-header {
+
+  text-align: center;
+}
